@@ -118,7 +118,7 @@ if ! shopt -oq posix; then
 fi
 
 # Apply codespaces prompt if we're on a codespaces container
-if $USER == 'codespace'
+if [ "$USER" == "codespace" ]
 then
     # Codespaces bash prompt theme
     __bash_prompt() {
