@@ -4,12 +4,12 @@
 set eux -o pipefail
 
 # Install homebrew
-echo '' | bash homebrew-install.sh
+echo '' | bash $PWD/scripts/homebrew-install.sh
 # Install Oh-My-Bash
-bash oh-my-bash-install.sh
+bash $PWD/scripts/oh-my-bash-install.sh
 
 # Install ChezMoi
-bash chezmoi.sh
+bash $PWD/scripts/chezmoi.sh
 $HOME/bin/chezmoi init ScrambledBits/dotfiles-linux --apply --progress --verbose
 
 # Source $HOME/.bashrc to reload settings
